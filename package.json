@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "allure": "allure generate --clean ./allure-results && allure open"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,8 @@
     "@wdio/mocha-framework": "^8.32.2",
     "appium": "^2.5.1",
     "appium-uiautomator2-driver": "^3.0.0",
-    "wdio-wait-for": "^3.0.11"
+    "dotenv": "^16.4.5",
+    "wdio-wait-for": "^3.0.11",
+    "winston": "^3.11.0"
   }
 }
