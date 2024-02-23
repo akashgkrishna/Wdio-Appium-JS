@@ -1,8 +1,3 @@
----
-runme:
-  id: 01HQANF42VB67D51Y3R0MEE4KG
-  version: v3
----
 
 # Wdio-Appium-JS
 
