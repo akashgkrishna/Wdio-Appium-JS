@@ -24,13 +24,9 @@ class BaseScreen {
 
     async isDisplayed(selector) {
         const element = await this.getElement(selector);
-        return await element.isDisplayed();
-    }
-
-    async waitForDisplayed(selector) {
-        const element = await this.getElement(selector);
         await element.waitForDisplayed({ timeoutMsg: 'Element not displayed' });
-    }
+        return element.isDisplayed();
+    }   
 
     async getText(selector) {
         const element = await this.getElement(selector);
