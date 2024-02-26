@@ -16,7 +16,6 @@ class LogoutFlow extends BaseScreen{
         LOGGER.info('Logging out from the app');
         await footer.clickOnProfileIcon();
         await profileScreen.clickOnLogoutButton();
-        await browser.pause(5000);
 
     }
 

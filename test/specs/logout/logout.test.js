@@ -1,12 +1,17 @@
+const HomeScreen = require('../../screens/HomeScreen');
+const ProfileScreen = require('../../screens/ProfileScreen');
 const LoginFlow = require('../../userflows/LoginFlow');
 const LogoutFlow = require('../../userflows/LogoutFlow');
 const dataLoader = require('../../utils/dataLoader');
+const assert = require('assert'); 
 
 
 describe('Logout flow', async function(){
     let credentials;
     let logoutFlow;
     let loginFlow;
+    let homeScreen;
+    let profileScreen;
 
     this.beforeEach(async function(){
         // Login to application
@@ -16,6 +21,8 @@ describe('Logout flow', async function(){
         await loginFlow.performLogin(validCredentials.username, validCredentials.password, validCredentials.otp);
 
         logoutFlow = new LogoutFlow();
+        homeScreen = new HomeScreen();
+        profileScreen = new ProfileScreen();
 
     })
 
@@ -23,6 +30,11 @@ describe('Logout flow', async function(){
 
         // Act
         await logoutFlow.performLogout();
+        await profileScreen.clickOnBackButton();
+
+        // Assert
+        const isLogoutSuccessful = await homeScreen.isWelcomeTextDisplayed();
+        assert.strictEqual(isLogoutSuccessful, true, "Logout was not successful");
 
     })
 })
