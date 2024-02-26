@@ -22,5 +22,9 @@ class ProfileScreen extends BaseScreen{
         const isLogoutButtonDisplayed = await this.isDisplayed(this.selectors.logoutButton);
         return isUsernameDisplayed && isLogoutButtonDisplayed;
     }
+
+    async clickOnLogoutButton(){
+        await this.click(this.selectors.logoutButton);
+    }
 }
 module.exports = ProfileScreen;
