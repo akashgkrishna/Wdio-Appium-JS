@@ -9,7 +9,8 @@ class ProfileScreen extends BaseScreen{
             usernameTextField: `#inp-email`,
             passwordTextField: `#inp-password`,
             username: `#txt-username`,
-            logoutButton: `#btn-logout`
+            logoutButton: `#btn-logout`,
+            backButton: `#btn-back`
         }
     }
 
@@ -21,6 +22,14 @@ class ProfileScreen extends BaseScreen{
         const isUsernameDisplayed = await this.isDisplayed(this.selectors.username);
         const isLogoutButtonDisplayed = await this.isDisplayed(this.selectors.logoutButton);
         return isUsernameDisplayed && isLogoutButtonDisplayed;
+    }
+
+    async clickOnLogoutButton(){
+        await this.click(this.selectors.logoutButton);
+    }
+
+    async clickOnBackButton(){
+        await this.click(this.selectors.backButton);
     }
 }
 module.exports = ProfileScreen;

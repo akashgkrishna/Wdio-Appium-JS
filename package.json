@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
+    "single": "wdio run ./wdio.conf.js --spec test/specs/logout/logout.test.js",
     "allure": "allure generate --clean ./allure-results && allure open"
   },
   "keywords": [],

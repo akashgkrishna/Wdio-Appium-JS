@@ -1,9 +1,9 @@
 const assert = require('assert'); 
-const Logger = require("../customlogger/Logger");
-const ProfileScreen = require("../screens/ProfileScreen");
-const Footer = require("../screens/common/Footer");
-const LoginFlow = require("../userflows/LoginFlow");
-const dataLoader = require('../utils/dataLoader');
+const Logger = require("../../customlogger/Logger");
+const ProfileScreen = require("../../screens/ProfileScreen");
+const Footer = require("../../screens/common/Footer");
+const LoginFlow = require("../../userflows/LoginFlow");
+const dataLoader = require('../../utils/dataLoader');
 
 describe('Login Flow', async function() {
     let loginFlow;
