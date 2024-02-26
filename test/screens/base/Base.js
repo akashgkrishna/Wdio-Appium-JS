@@ -37,13 +37,6 @@ class BaseScreen {
         return await element.getText();
     }
 
-    async waitForText(selector, text) {
-        await browser.waitUntil(async () => {
-            const element = await this.getElement(selector);
-            const elementText = await element.getText();
-            return elementText.includes(text);
-        }, { timeoutMsg: 'Text not found' });
-    }
 }
 
 module.exports = BaseScreen;
