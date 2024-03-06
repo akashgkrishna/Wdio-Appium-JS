@@ -19,5 +19,11 @@ class LogoutFlow extends BaseScreen{
 
     }
 
+    async navigateToHome(){
+        
+    }
+
+
+
 }
 module.exports = LogoutFlow;

@@ -15,6 +15,10 @@ class Footer extends BaseScreen{
     async clickOnProfileIcon(){
         await this.click(this.selectors.profileIcon);
     }
+
+    async clickOnCartIcon(){
+        await this.click(this.selectors.cartIcon);
+    }
 }
 
 module.exports = Footer;
