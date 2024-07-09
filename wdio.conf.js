@@ -55,8 +55,8 @@ exports.config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         // browserName: 'Chrome',
-        'appium:deviceName': 'New_API_33',
-        'appium:platformVersion': '13',
+        'appium:deviceName': 'New_UpsideDownCake`',
+        'appium:platformVersion': '14',
         'appium:automationName': 'UiAutomator2', 
         // From root go to this path so always come to this
         'appium:app': path.join(process.cwd(), './app/android/ul-shopify.apk'),
@@ -71,7 +71,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'silent',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -111,7 +111,14 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [ 'appium'],
+    services: [
+        ['appium', {
+            args: {
+                address: 'localhost',
+                port: 4723
+            }
+        }]
+    ],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
