@@ -22,7 +22,7 @@ Before you start using this framework, ensure you have the following installed:
 
 Clone the project repository by running the following command:
 
-`git clone https://github.com/akashkrishna7/Wdio-Appium-JS.git` 
+git clone https://github.com/akashkrishna7/Wdio-Appium-JS.git
 
 Navigate to the project directory:
 
