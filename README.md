@@ -34,11 +34,11 @@ Install the necessary dependencies:
 
 ## Running Tests
 
-Add the apk to app/android folder
+**Add the apk to app/android folder**
 
 You can download the Ultralesson Shopify app from the link below
 
-https://github.com/Ultralesson/ul-shopify/releases/tag/ul-shopify-build
+`https://github.com/Ultralesson/ul-shopify/releases/tag/ul-shopify-build`
 
 To execute your tests, use the following npm scripts:
 
