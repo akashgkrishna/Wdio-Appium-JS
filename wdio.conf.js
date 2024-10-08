@@ -55,7 +55,7 @@ exports.config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         // browserName: 'Chrome',
-        'appium:deviceName': 'New_UpsideDownCake`',
+        'appium:deviceName': 'Pixel_8_API_34',
         'appium:platformVersion': '14',
         'appium:automationName': 'UiAutomator2', 
         // From root go to this path so always come to this
@@ -71,7 +71,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:
